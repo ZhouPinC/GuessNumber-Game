@@ -52,6 +52,7 @@ const buttons = {
   pause: document.getElementById('pause-btn'),
   back: document.getElementById('back-btn'),
   backFromHistory: document.getElementById('back-from-history'),
+  clearHistory: document.getElementById('clear-history-btn'),
   saveSettings: document.getElementById('save-settings'),
   cancelSettings: document.getElementById('cancel-settings'),
   resume: document.getElementById('resume-btn'),
@@ -146,6 +147,7 @@ function setupEventListeners() {
   
   // 历史记录界面按钮
   buttons.backFromHistory.addEventListener('click', showStartPanel);
+  buttons.clearHistory.addEventListener('click', clearHistory);
   
   // 设置弹窗按钮
   buttons.saveSettings.addEventListener('click', saveSettingsHandler);
@@ -459,6 +461,16 @@ function saveSettingsHandler() {
   
   modals.settings.style.display = 'none';
   alert('设置已保存');
+}
+
+// 清空历史记录
+function clearHistory() {
+  if (confirm('确定要清空所有历史记录吗？此操作不可恢复！')) {
+    gameHistory = [];
+    localStorage.setItem('guessNumberHistory', '[]');
+    updateHistoryDisplay();
+    alert('历史记录已清空');
+  }
 }
 
 // 初始化游戏

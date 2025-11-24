@@ -350,7 +350,7 @@ public class GuessNumberGame extends JFrame {
     class StartPanel extends JPanel {
         private GuessNumberGame parent;
         private JLabel titleLabel;
-        private JButton startBtn, settingBtn, exitBtn;
+        private JButton startBtn, settingBtn, historyBtn, exitBtn;
         private javax.swing.Timer titleAnimTimer;
         private float titleScale = 1.0f;
         private boolean scaleUp = true;
@@ -379,6 +379,7 @@ public class GuessNumberGame extends JFrame {
             // 中央竖向按钮区
             startBtn = makeBigButton("开始游戏");
             settingBtn = makeBigButton("游戏设置");
+            historyBtn = makeBigButton("历史记录");
             exitBtn = makeBigButton("退出游戏");
 
             // 布局
@@ -395,9 +396,12 @@ public class GuessNumberGame extends JFrame {
             add(settingBtn, gbc);
 
             gbc.gridy = 4;
-            add(exitBtn, gbc);
+            add(historyBtn, gbc);
 
             gbc.gridy = 5;
+            add(exitBtn, gbc);
+
+            gbc.gridy = 6;
             JLabel foot = new JLabel("版本 1.0  — 设计：丞哥");
             foot.setFont(new Font(parent.getSettings().fontName, Font.PLAIN, 12));
             foot.setForeground(new Color(100, 100, 100));
@@ -416,6 +420,11 @@ public class GuessNumberGame extends JFrame {
                 applySavedStyle();
             });
 
+            historyBtn.addActionListener(e -> {
+                // 显示历史记录对话框
+                showHistoryDialog();
+            });
+
             exitBtn.addActionListener(e -> {
                 int ok = JOptionPane.showConfirmDialog(parent, "确认退出游戏吗？", "退出确认", JOptionPane.YES_NO_OPTION);
                 if (ok == JOptionPane.YES_OPTION) System.exit(0);
@@ -424,6 +433,7 @@ public class GuessNumberGame extends JFrame {
             // 悬停微动效（按钮缩放）
             addHoverEffect(startBtn);
             addHoverEffect(settingBtn);
+            addHoverEffect(historyBtn);
             addHoverEffect(exitBtn);
         }
 
@@ -483,6 +493,81 @@ public class GuessNumberGame extends JFrame {
                     parent.getSettings().save();
                 }
             });
+        }
+
+        private void showHistoryDialog() {
+            // 显示历史记录对话框
+            JDialog historyDialog = new JDialog(parent, "游戏历史记录", true);
+            historyDialog.setSize(600, 400);
+            historyDialog.setLocationRelativeTo(parent);
+            historyDialog.setLayout(new BorderLayout());
+
+            JTextArea historyText = new JTextArea();
+            historyText.setEditable(false);
+            historyText.setFont(new Font(parent.getSettings().fontName, Font.PLAIN, 14));
+            historyText.setLineWrap(true);
+            historyText.setWrapStyleWord(true);
+            
+            // 从 localStorage 读取历史记录（使用 Properties 文件模拟）
+            String historyContent = loadGameHistory();
+            if (historyContent.isEmpty()) {
+                historyText.setText("暂无历史记录");
+            } else {
+                historyText.setText(historyContent);
+            }
+            
+            JScrollPane scrollPane = new JScrollPane(historyText);
+            historyDialog.add(scrollPane, BorderLayout.CENTER);
+
+            // 按钮面板
+            JPanel buttonPanel = new JPanel();
+            JButton clearBtn = new JButton("清空历史记录");
+            JButton closeBtn = new JButton("关闭");
+            
+            clearBtn.addActionListener(e -> {
+                int confirm = JOptionPane.showConfirmDialog(historyDialog, 
+                    "确定要清空所有历史记录吗？此操作不可恢复！", 
+                    "确认清空", 
+                    JOptionPane.YES_NO_OPTION);
+                if (confirm == JOptionPane.YES_OPTION) {
+                    clearGameHistory();
+                    historyText.setText("暂无历史记录");
+                    JOptionPane.showMessageDialog(historyDialog, "历史记录已清空");
+                }
+            });
+            
+            closeBtn.addActionListener(e -> historyDialog.dispose());
+            
+            buttonPanel.add(clearBtn);
+            buttonPanel.add(closeBtn);
+            historyDialog.add(buttonPanel, BorderLayout.SOUTH);
+
+            historyDialog.setVisible(true);
+        }
+
+        private String loadGameHistory() {
+            // 从文件加载游戏历史记录
+            File historyFile = new File("game_history.txt");
+            if (!historyFile.exists()) {
+                return "";
+            }
+            try {
+                return new String(Files.readAllBytes(historyFile.toPath()), "UTF-8");
+            } catch (IOException e) {
+                return "读取历史记录失败";
+            }
+        }
+
+        private void clearGameHistory() {
+            // 清空游戏历史记录
+            File historyFile = new File("game_history.txt");
+            try {
+                if (historyFile.exists()) {
+                    Files.write(historyFile.toPath(), "".getBytes("UTF-8"));
+                }
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(parent, "清空失败：" + e.getMessage());
+            }
         }
     }
 

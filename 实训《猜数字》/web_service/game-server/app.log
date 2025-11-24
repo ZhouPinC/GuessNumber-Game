@@ -101,3 +101,415 @@ Hibernate:
         game_data gd1_0 
     order by
         gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc
+Hibernate: 
+    select
+        gd1_0.id,
+        gd1_0.attempts,
+        gd1_0.client_id,
+        gd1_0.client_type,
+        gd1_0.current_history,
+        gd1_0.game_mode,
+        gd1_0.game_type,
+        gd1_0.level,
+        gd1_0.max_attempts,
+        gd1_0.max_value,
+        gd1_0.min_value,
+        gd1_0.result,
+        gd1_0.score,
+        gd1_0.target,
+        gd1_0.update_time,
+        gd1_0.user_count 
+    from
+        game_data gd1_0 
+    order by
+        gd1_0.update_time desc

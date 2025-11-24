@@ -205,13 +205,33 @@ button {
   margin-top: 50px;
 }
 
+.history-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .back-btn {
-  display: block;
-  margin: 0 auto;
   padding: 10px 20px;
   background-color: #666;
   color: white;
   border-radius: 6px;
+}
+
+.back-btn:hover {
+  background-color: #555;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 6px;
+}
+
+.action-btn:hover {
+  background-color: #c82333;
 }
 
 /* 弹窗样式 */
