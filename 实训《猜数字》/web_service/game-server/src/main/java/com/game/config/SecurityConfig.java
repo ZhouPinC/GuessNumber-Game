@@ -1,4 +1,3 @@
-// com.game.config.SecurityConfig.java
 package com.game.config;
 
 import org.springframework.context.annotation.Bean;
@@ -28,31 +27,29 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        // 允许匿名访问的路径
                         .requestMatchers("/", "/game", "/game/**", "/gameSync", "/login").permitAll()
-                        // 后台管理路径需要认证
                         .requestMatchers("/admin/**").authenticated()
                         .anyRequest().permitAll()
                 )
                 .formLogin(form -> form
-                        .loginPage("/login")  // 自定义登录页
-                        .defaultSuccessUrl("/admin", true)  // 登录成功后跳转
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/admin", true)
                         .permitAll()
                 )
                 .logout(logout -> logout
-                        .logoutSuccessUrl("/login")  // 退出登录后跳转
+                        .logoutSuccessUrl("/login")
                         .permitAll()
                 )
-                .csrf(csrf -> csrf.disable());  // 开发阶段关闭CSRF
+                .csrf(csrf -> csrf.disable());
 
         return http.build();
     }
 
-    // 配置用户（admin/admin123）
+    // 配置用户（生产环境请替换为数据库用户，并在外部配置文件设置密码）
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails admin = User.withUsername("admin")
-                .password(passwordEncoder().encode("admin123"))  // 密码加密存储
+        UserDetails admin = User.withUsername("******")
+                .password(passwordEncoder().encode("******"))
                 .roles("ADMIN")
                 .build();
 
